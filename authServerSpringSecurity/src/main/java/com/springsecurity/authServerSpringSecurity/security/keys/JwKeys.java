@@ -16,6 +16,7 @@ public class JwKeys {
         KeyPairGenerator g = null;
         try {
             g = KeyPairGenerator.getInstance("RSA");
+            g.initialize(2048);
             KeyPair keyPair = g.generateKeyPair();
 
             RSAPublicKey rsaPublicKey = (RSAPublicKey) keyPair.getPublic();

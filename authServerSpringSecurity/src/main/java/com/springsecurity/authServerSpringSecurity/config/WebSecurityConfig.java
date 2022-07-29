@@ -1,5 +1,6 @@
 package com.springsecurity.authServerSpringSecurity.config;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -12,10 +13,14 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
+@RequiredArgsConstructor
 public class WebSecurityConfig {
+
+    private final CorsCustomizer corsCustomizer;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
+        corsCustomizer.corsCustomizer(httpSecurity);
         return httpSecurity.formLogin()
                 .and()
                 .authorizeRequests()
