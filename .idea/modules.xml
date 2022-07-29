@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/authServerSpringSecurity/authServerSpringSecurity.iml" filepath="$PROJECT_DIR$/authServerSpringSecurity/authServerSpringSecurity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/fullStackOauth2-springSecurity-react.iml" filepath="$PROJECT_DIR$/.idea/fullStackOauth2-springSecurity-react.iml" />
+    </modules>
+  </component>
+</project>
